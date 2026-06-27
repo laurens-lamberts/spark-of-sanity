@@ -41,7 +41,10 @@ export default function Music({ ref }) {
                           <span className="music__track-num">{i + 1}</span>
                           <span className="music__track-title">{track.title}</span>
                           <span className="music__track-icon">
-                            {isActive && isPlaying ? '⏸' : '▶'}
+                            {isActive && isPlaying
+                              ? <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+                              : <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg>
+                            }
                           </span>
                         </button>
                       </li>

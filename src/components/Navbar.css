@@ -8,12 +8,21 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-.navbar--scrolled {
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.navbar--scrolled::before {
+  opacity: 1;
 }
 
 .navbar__logo img {

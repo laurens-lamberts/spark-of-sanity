@@ -28,9 +28,9 @@ export function PlayerProvider({ children }) {
       play(next, list)
     }
 
-    audio.play().catch(() => {})
     setCurrentTrack(track)
     setIsPlaying(true)
+    try { audio.play()?.catch(() => {}) } catch (e) {}
   }, [])
 
   const pause = useCallback(() => {
