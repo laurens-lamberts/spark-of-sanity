@@ -35,7 +35,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <a href="#top" className="footer__logo-link">
-        <img src="/assets/logo/logo-white.png" alt="Spark of Sanity" className="footer__logo" />
+        <img src={`${import.meta.env.BASE_URL}assets/logo/logo-white.png`} alt="Spark of Sanity" className="footer__logo" />
       </a>
       <nav className="footer__socials" aria-label="Social media links">
         {SOCIALS.map(({ label, href, Icon }) => (

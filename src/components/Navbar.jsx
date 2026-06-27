@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <a href="#top" className="navbar__logo" onClick={close}>
-        <img src="/assets/logo/logo-white.png" alt="Spark of Sanity" height="40" />
+        <img src={`${import.meta.env.BASE_URL}assets/logo/logo-white.png`} alt="Spark of Sanity" height="40" />
       </a>
       <nav role="navigation" className={`navbar__nav ${open ? 'nav--open' : ''}`}>
         {NAV_LINKS.map(link => (
