@@ -17,7 +17,7 @@
 }
 
 .navbar__logo img {
-  height: 40px;
+  height: 56px;
   width: auto;
 }
 
@@ -28,7 +28,7 @@
 
 .navbar__link {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   letter-spacing: 0.1em;
   color: var(--color-text);
   transition: color 0.2s;

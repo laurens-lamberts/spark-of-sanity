@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Project resources (WordPress backup, SQL dump — not for version control)
+Resources/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
