@@ -32,8 +32,8 @@ export default function App() {
         <Hero />
         <Gigs />
         <Music ref={musicRef} />
-        <Videos />
         <About />
+        <Videos />
       </main>
       <Footer />
       <MiniPlayer visible={showMiniPlayer} />

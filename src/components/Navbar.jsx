@@ -4,8 +4,8 @@ import './Navbar.css'
 const NAV_LINKS = [
   { label: 'Gigs', href: '#gigs' },
   { label: 'Music', href: '#music' },
-  { label: 'Videos', href: '#videos' },
   { label: 'About', href: '#about' },
+  { label: 'Videos', href: '#videos' },
 ]
 
 export default function Navbar() {
