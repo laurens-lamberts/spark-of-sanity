@@ -30,7 +30,7 @@ export default function Gigs() {
             data-popup-background-color="#111111"
             data-background-color="transparent"
             data-display-limit="15"
-            data-link-text-color="#FFFFFF"
+            data-link-text-color="#000000"
             data-display-lineup="false"
             data-separator-color="rgba(255,255,255,0.15)"
             data-display-track-button="false"
