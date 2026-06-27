@@ -1,0 +1,93 @@
+.music__releases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .music__releases {
+    grid-template-columns: 1fr;
+  }
+}
+
+.music__ep {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.music__ep-cover img {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.music__ep-cover img:hover {
+  transform: scale(1.02);
+}
+
+.music__ep-year {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.music__tracklist {
+  list-style: none;
+}
+
+.music__track {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.music__track.track--active {
+  background: rgba(245,197,24,0.08);
+  border-color: rgba(245,197,24,0.2);
+}
+
+.music__track-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+
+.music__track-btn:hover {
+  color: var(--color-accent);
+}
+
+.track--active .music__track-btn {
+  color: var(--color-accent);
+}
+
+.music__track-num {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  width: 20px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.music__track-title {
+  flex: 1;
+  text-align: left;
+}
+
+.music__track-icon {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.track--active .music__track-icon {
+  color: var(--color-accent);
+}
