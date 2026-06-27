@@ -16,7 +16,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url('/assets/images/hero-mobile.png');
+    background-image: url('/assets/images/ep2-cover-mobile.jpg');
+    background-position: center center;
   }
 }
 
