@@ -21,8 +21,9 @@ describe('MiniPlayer', () => {
     expect(screen.getByTestId('mini-player')).toHaveClass('mini-player--hidden')
   })
 
-  it('does not have hidden class when visible=true', () => {
+  it('does not have hidden class when visible=true and track loaded', () => {
     render(<PlayerProvider><Harness visible={true} /></PlayerProvider>)
+    fireEvent.click(screen.getByText('Load'))
     expect(screen.getByTestId('mini-player')).not.toHaveClass('mini-player--hidden')
   })
 
