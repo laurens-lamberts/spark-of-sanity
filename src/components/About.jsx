@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { members } from '../data/members'
 import './About.css'
 
-const BIO = `Spark of Sanity is a rock band from the Netherlands. We play a mix of original songs and covers from bands we love; Kaleo, Highly Suspect, Arctic Monkeys and many others. We're best experienced live, that's where the raw energy really comes to life.`
+const BIO = `Spark of Sanity is an alternative rock band from the Netherlands. We play a mix of original songs and covers from bands we love — Kaleo, Highly Suspect, Arctic Monkeys, Muse and many others. We're best experienced live, that's where the raw energy really comes to life.`
 
 export default function About() {
   const membersRef = useRef(null)
