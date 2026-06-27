@@ -1,5 +1,12 @@
 import '@testing-library/jest-dom'
 
+global.IntersectionObserver = class {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+
 window.HTMLMediaElement.prototype.play = vi.fn(() => Promise.resolve())
 window.HTMLMediaElement.prototype.pause = vi.fn()
 window.HTMLMediaElement.prototype.load = vi.fn()
