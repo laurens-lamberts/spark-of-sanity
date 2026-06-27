@@ -30,9 +30,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Gigs />
         <Music ref={musicRef} />
         <Videos />
-        <Gigs />
         <About />
       </main>
       <Footer />

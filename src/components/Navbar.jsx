@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import './Navbar.css'
 
 const NAV_LINKS = [
+  { label: 'Gigs', href: '#gigs' },
   { label: 'Music', href: '#music' },
   { label: 'Videos', href: '#videos' },
-  { label: 'Gigs', href: '#gigs' },
   { label: 'About', href: '#about' },
 ]
 
