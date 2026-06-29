@@ -14,20 +14,20 @@ describe('Music', () => {
 
   it('renders all 9 track titles', () => {
     render(<Music />, { wrapper })
-    expect(screen.getByText('Storm')).toBeInTheDocument()
+    expect(screen.getByText('Storm in My Head')).toBeInTheDocument()
     expect(screen.getByText('Willow Tree')).toBeInTheDocument()
-    expect(screen.getByText('Lies For A Living')).toBeInTheDocument()
+    expect(screen.getByText('Lies for a Living')).toBeInTheDocument()
   })
 
   it('clicking a track adds track--active class to its list item', () => {
     render(<Music />, { wrapper })
-    fireEvent.click(screen.getByText('Storm'))
-    expect(screen.getByText('Storm').closest('li')).toHaveClass('track--active')
+    fireEvent.click(screen.getByText('Storm in My Head'))
+    expect(screen.getByText('Storm in My Head').closest('li')).toHaveClass('track--active')
   })
 
   it('other tracks are not active after clicking Storm', () => {
     render(<Music />, { wrapper })
-    fireEvent.click(screen.getByText('Storm'))
+    fireEvent.click(screen.getByText('Storm in My Head'))
     expect(screen.getByText('Willow Tree').closest('li')).not.toHaveClass('track--active')
   })
 })
