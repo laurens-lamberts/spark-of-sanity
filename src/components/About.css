@@ -1,3 +1,40 @@
+.about__bio-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.about__toggle-group {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about__toggle-btn {
+  padding: 6px 16px;
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.about__toggle-btn:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about__toggle-btn:hover {
+  color: var(--color-text);
+}
+
+.about__toggle-btn.is-active {
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+}
+
 .about__bio {
   max-width: 680px;
   margin-bottom: 56px;

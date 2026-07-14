@@ -1,8 +1,7 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { members } from '../data/members'
+import { BIOS } from '../data/bios'
 import './About.css'
-
-const BIO = `Spark of Sanity is an alternative rock band from the Netherlands. We play a mix of original songs and covers from bands we love — Kaleo, Highly Suspect, Arctic Monkeys, Muse and many others. We're best experienced live, that's where the raw energy really comes to life.`
 
 const PRESSKIT_FILES = [
   { label: 'Rider', file: 'rider.pdf', ext: 'PDF' },
@@ -11,6 +10,8 @@ const PRESSKIT_FILES = [
 
 export default function About() {
   const membersRef = useRef(null)
+  const [lang, setLang] = useState('en')
+  const [length, setLength] = useState('short')
 
   useEffect(() => {
     if (!membersRef.current) return
@@ -31,7 +32,37 @@ export default function About() {
     <div className="section-wrapper section-wrapper--alt">
       <section id="about">
         <h2 className="section-heading">About</h2>
-        <p className="about__bio">{BIO}</p>
+        <div className="about__bio-toggles">
+          <div className="about__toggle-group">
+            <button
+              className={`about__toggle-btn ${lang === 'en' ? 'is-active' : ''}`}
+              onClick={() => setLang('en')}
+            >
+              EN
+            </button>
+            <button
+              className={`about__toggle-btn ${lang === 'nl' ? 'is-active' : ''}`}
+              onClick={() => setLang('nl')}
+            >
+              NL
+            </button>
+          </div>
+          <div className="about__toggle-group">
+            <button
+              className={`about__toggle-btn ${length === 'short' ? 'is-active' : ''}`}
+              onClick={() => setLength('short')}
+            >
+              Short
+            </button>
+            <button
+              className={`about__toggle-btn ${length === 'long' ? 'is-active' : ''}`}
+              onClick={() => setLength('long')}
+            >
+              Long
+            </button>
+          </div>
+        </div>
+        <p className="about__bio">{BIOS[lang][length]}</p>
         <div className="about__members" ref={membersRef}>
           {members.map(member => (
             <div key={member.id} className="about__member">
