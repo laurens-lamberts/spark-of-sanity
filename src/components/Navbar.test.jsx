@@ -8,12 +8,14 @@ describe('Navbar', () => {
     expect(screen.getByAltText('Spark of Sanity')).toBeInTheDocument()
   })
 
-  it('renders all four nav links', () => {
+  it('renders all nav links', () => {
     render(<Navbar />)
     expect(screen.getByText('Music')).toBeInTheDocument()
     expect(screen.getByText('Videos')).toBeInTheDocument()
     expect(screen.getByText('Gigs')).toBeInTheDocument()
     expect(screen.getByText('About')).toBeInTheDocument()
+    expect(screen.getByText('Photos')).toBeInTheDocument()
+    expect(screen.queryByText('Contact')).not.toBeInTheDocument()
   })
 
   it('mobile menu opens on hamburger click', () => {

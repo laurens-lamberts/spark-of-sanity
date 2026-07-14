@@ -5,8 +5,8 @@ const NAV_LINKS = [
   { label: 'Gigs', href: '#gigs' },
   { label: 'Music', href: '#music' },
   { label: 'About', href: '#about' },
+  { label: 'Photos', href: '#photos' },
   { label: 'Videos', href: '#videos' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {

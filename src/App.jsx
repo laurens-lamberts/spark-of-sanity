@@ -7,7 +7,7 @@ import MiniPlayer from './components/MiniPlayer'
 import Videos from './components/Videos'
 import Gigs from './components/Gigs'
 import About from './components/About'
-import Contact from './components/Contact'
+import Photos from './components/Photos'
 import Footer from './components/Footer'
 import './index.css'
 
@@ -34,8 +34,8 @@ export default function App() {
         <Gigs />
         <Music ref={musicRef} />
         <About />
+        <Photos />
         <Videos />
-        <Contact />
       </main>
       <Footer />
       <MiniPlayer visible={showMiniPlayer} />
