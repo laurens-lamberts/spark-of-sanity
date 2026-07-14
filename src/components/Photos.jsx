@@ -29,6 +29,7 @@ export default function Photos() {
             </button>
           ))}
         </div>
+        <p className="photos__credit">Photo credits: Arie Mastenbroek</p>
         {activePhoto && (
           <PhotoLightbox photo={activePhoto} onClose={() => setActivePhoto(null)} />
         )}

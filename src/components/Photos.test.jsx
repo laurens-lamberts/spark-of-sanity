@@ -3,9 +3,14 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import Photos from './Photos'
 
 describe('Photos', () => {
-  it('renders 9 photo thumbnail buttons', () => {
+  it('renders 8 photo thumbnail buttons', () => {
     render(<Photos />)
-    expect(screen.getAllByRole('button')).toHaveLength(9)
+    expect(screen.getAllByRole('button')).toHaveLength(8)
+  })
+
+  it('renders the photo credit line', () => {
+    render(<Photos />)
+    expect(screen.getByText('Photo credits: Arie Mastenbroek')).toBeInTheDocument()
   })
 
   it('clicking a thumbnail opens the lightbox', () => {
