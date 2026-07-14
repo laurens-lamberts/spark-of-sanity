@@ -22,3 +22,20 @@ describe('About', () => {
     expect(screen.getByText(/rock band/i)).toBeInTheDocument()
   })
 })
+
+describe('About contact block', () => {
+  it('renders the contact email link', () => {
+    render(<About />)
+    expect(screen.getByRole('link', { name: /contact@sparkofsanity\.nl/ })).toHaveAttribute(
+      'href',
+      'mailto:contact@sparkofsanity.nl'
+    )
+  })
+
+  it('renders Rider and Logo download buttons but not Photo', () => {
+    render(<About />)
+    expect(screen.getByText('Rider')).toBeInTheDocument()
+    expect(screen.getByText('Logo')).toBeInTheDocument()
+    expect(screen.queryByText('Photo')).not.toBeInTheDocument()
+  })
+})

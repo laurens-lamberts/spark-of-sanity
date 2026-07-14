@@ -65,3 +65,64 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
+.about__contact {
+  margin-top: 56px;
+}
+
+.about__contact-text {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+}
+
+.about__contact-email {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about__contact-email:hover {
+  opacity: 0.8;
+}
+
+.about__downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about__download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.about__download-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.about__download-ext {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  border: 1px solid currentColor;
+  padding: 1px 4px;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.about__download-btn:hover .about__download-ext {
+  color: var(--color-accent);
+}
