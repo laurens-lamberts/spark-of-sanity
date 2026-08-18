@@ -3,7 +3,7 @@ import { videos } from "./videos";
 
 describe("videos data", () => {
   it("has videos", () => {
-    expect(videos).toBeGreaterThan(10);
+    expect(videos.length).toBeGreaterThan(10);
   });
 
   it("each video has id, valid youtubeId, and non-empty title", () => {

@@ -5,7 +5,7 @@ import Videos from './Videos'
 describe('Videos', () => {
   it('renders video buttons', () => {
     render(<Videos />)
-    expect(screen.getAllByRole('button')).toBeGreaterThan(10)
+    expect(screen.getAllByRole('button').length).toBeGreaterThan(10)
   })
 
   it('clicking a video opens the lightbox', () => {
