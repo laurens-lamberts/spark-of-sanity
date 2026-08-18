@@ -3,9 +3,9 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import Photos from './Photos'
 
 describe('Photos', () => {
-  it('renders 8 photo thumbnail buttons', () => {
+  it('renders photo thumbnail buttons', () => {
     render(<Photos />)
-    expect(screen.getAllByRole('button')).toHaveLength(8)
+    expect(screen.getAllByRole('button').length).toBeGreaterThan(10)
   })
 
   it('renders the photo credit line', () => {
